@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: HeavyDutySoul/zmk/.github/workflows/build-user-config.yml@soft_off
+    uses: HeavyDutySoul/zmk/.github/workflows/build-user-config.yml@main
