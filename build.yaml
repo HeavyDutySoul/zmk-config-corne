@@ -1,4 +1,4 @@
-﻿# This file generates the GitHub Actions matrix
+# This file generates the GitHub Actions matrix
 # For simple board + shield combinations, add them
 # to the top level board and shield arrays, for more
 # control, add individual board + shield combinations to
@@ -18,3 +18,6 @@ include:
 	snippet: studio-rpc-usb-uart
   - board: nrfmicro_13
     shield: corne_right
+
+  - board: nrfmicro_13
+    shield: settings_reset
