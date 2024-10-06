@@ -17,9 +17,10 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
+board: [ "nrfmicro_13" ]
+shield: [ "corne_left", "corne_right" ]
 include:
   - board: nrfmicro_13
     shield: corne_left
     snippet: studio-rpc-usb-uart
-  - board: nrfmicro_13
-    shield: corne_right
+	artifact-name: corne_left_with_usb_studio
