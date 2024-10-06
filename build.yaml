@@ -23,7 +23,7 @@ include:
   - board: nrfmicro_13
     shield: corne_left
     snippet: studio-rpc-usb-uart
-    artifact-name: corne_left_with_usb_studio
+    artifact-name: corne_left-nrfmicro_13_w_usb_studio
   - board: nrfmicro_13
     shield: settings_reset
     artifact-name: corne_settings_reset
