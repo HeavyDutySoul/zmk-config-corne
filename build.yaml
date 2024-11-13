@@ -22,8 +22,8 @@ shield: [ "corne_left", "corne_right" ]
 include:
   - board: nrfmicro_13
     shield: corne_left
-    snippet: studio-rpc-usb-uart
-    artifact-name: corne_left-nrfmicro_13_w_usb_studio
+    snippet: nrf52840-nosd
+    artifact-name: corne_left_nrfmicro_zmk
   - board: nrfmicro_13
     shield: settings_reset
     artifact-name: corne_settings_reset
