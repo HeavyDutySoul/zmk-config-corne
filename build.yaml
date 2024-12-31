@@ -17,13 +17,15 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-board: [ "nrfmicro_13" ]
-shield: [ "corne_left", "corne_right" ]
 include:
   - board: nrfmicro_13
     shield: corne_left
     snippet: nrf52840-nosd
     artifact-name: corne_left_nrfmicro_zmk
+ - board: nrfmicro_13
+    shield: corne_right
+    snippet: nrf52840-nosd
+    artifact-name: corne_right_nrfmicro_zmk
   - board: nrfmicro_13
     shield: settings_reset
     artifact-name: corne_settings_reset
