@@ -18,15 +18,19 @@
 #
 ---
 include:
+  - board: nrf52840dongle_nrf52840
+    shield: corne_central_dongle
   - board: nrfmicro_13
-    shield: corne_left
+    shield: corne_central_left
     snippet: nrf52840-nosd
-    artifact-name: corne_left_nrfmicro_zmk
   - board: nrfmicro_13
-    shield: corne_right
+    shield: corne_peripheral_left
     snippet: nrf52840-nosd
-    artifact-name: corne_right_nrfmicro_zmk
+  - board: nrfmicro_13
+    shield: corne_peripheral_right
+    snippet: nrf52840-nosd
   - board: nrfmicro_13
     shield: settings_reset
-    artifact-name: corne_settings_reset
     snippet: nrf52840-nosd
+  - board: nrf52840dongle_nrf52840
+    shield: settings_reset
