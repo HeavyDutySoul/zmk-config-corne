@@ -35,3 +35,4 @@ include:
     snippet: nrf52840-nosd
   - board: nrf52840dongle_nrf52840
     shield: settings_reset
+    snippet: nrf52840-nosd
