@@ -12,4 +12,12 @@ config BOARD
 config BT_CTLR
 	default BT
 
+if USB_DEVICE_STACK
+
+# Enable UART driver, needed for CDC ACM
+config SERIAL
+  default y
+
+endif # USB_DEVICE_STACK
+
 endif # BOARD_NRF52840DONGLE_NRF52840
