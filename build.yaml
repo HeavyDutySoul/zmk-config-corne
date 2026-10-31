@@ -18,18 +18,18 @@
 #
 ---
 include:
-  - board: nrfmicro/nrf52840/zmk
+  - board: nrfmicro@1.3.0/nrf52840/zmk
     shield: corne_left
     snippet: nrf52840-nosd studio-rpc-usb-uart
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=y
       -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: corne_left_nrfmicro_zmk
-  - board: nrfmicro/nrf52840/zmk
+  - board: nrfmicro@1.3.0/nrf52840/zmk
     shield: corne_right
     snippet: nrf52840-nosd
     artifact-name: corne_right_nrfmicro_zmk
-  - board: nrfmicro/nrf52840/zmk
+  - board: nrfmicro@1.3.0/nrf52840/zmk
     shield: settings_reset
     artifact-name: corne_settings_reset
     snippet: nrf52840-nosd
