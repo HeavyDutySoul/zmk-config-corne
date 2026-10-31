@@ -15,35 +15,6 @@
 };
 
 / {
-    behaviors {
-        soft_off_plus: soft_off_plus {
-            compatible = "zmk,behavior-soft-off-plus";
-            #binding-cells = <0>;
-            hold-time-ms = <1200>;
-        };
-    };
-
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;   /* any key wakes */
-    };
-
-    soft_off_plus_wake: soft_off_plus_wake {
-        compatible = "zmk,soft-off-plus-wake";
-        wake-gpios   = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* all rows */
-                       <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                       <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                       <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        strobe-gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>,                    /* all cols */
-                       <&pro_micro 15 GPIO_ACTIVE_HIGH>,
-                       <&pro_micro 18 GPIO_ACTIVE_HIGH>,
-                       <&pro_micro 19 GPIO_ACTIVE_HIGH>,
-                       <&pro_micro 20 GPIO_ACTIVE_HIGH>,
-                       <&pro_micro 21 GPIO_ACTIVE_HIGH>;
-        wake-hold-ms = <1200>;
-        bypass-on-usb;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
