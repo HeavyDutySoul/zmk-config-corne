@@ -104,14 +104,14 @@
             // -----------------------------------------------------------------------------------------
             // | BOOT |      |     |     |     |     |   |     |     |     |     |      | BOOT |
             // | RSET |      |     |     |     |     |   |     |     |     |     |      | RSET |
-            // |      |      |     |     |     | OFF |   | OFF |     |     |     |      |      |
+            // | EP_T |      |     |     |     | OFF |   | OFF |     |     |     |      | EP_T |
             //                    |     |     |     |   |     |     |     |
 
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &bootloader
-&sys_reset   &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &sys_reset
-&trans       &trans  &trans  &trans  &trans  &soft_off_plus    &soft_off_plus  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans  &trans            &trans          &trans  &trans
+&bootloader        &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &bootloader
+&sys_reset         &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &sys_reset
+&trans             &trans  &trans  &trans  &trans  &soft_off_plus    &soft_off_plus  &trans  &trans  &trans  &trans  &trans
+                                   &trans  &trans  &trans            &trans          &trans  &trans
             >;
         };
     };

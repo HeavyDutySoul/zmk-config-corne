@@ -2,15 +2,13 @@ manifest:
   remotes:
     - name: HeavyDutySoul
       url-base: https://github.com/HeavyDutySoul
-    - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov
   projects:
     - name: zmk
       remote: HeavyDutySoul
       revision: feat/battery-reporting
       import: app/west.yml
     - name: zmk-soft-off-plus
-      remote: oleksandrmaslov
+      remote: HeavyDutySoul
       revision: main
   self:
     path: config
