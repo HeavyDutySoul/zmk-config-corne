@@ -44,6 +44,14 @@
         bypass-on-usb;
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -92,12 +100,18 @@
             >;
         };
 
-        layer_3 {
+        adjust_layer {
+            // -----------------------------------------------------------------------------------------
+            // | BOOT |      |     |     |     |     |   |     |     |     |     |      | BOOT |
+            // | RSET |      |     |     |     |     |   |     |     |     |     |      | RSET |
+            // |      |      |     |     |     | OFF |   | OFF |     |     |     |      |      |
+            //                    |     |     |     |   |     |     |     |
+
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &bootloader
+&sys_reset   &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &sys_reset
+&trans       &trans  &trans  &trans  &trans  &soft_off_plus    &soft_off_plus  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans  &trans            &trans          &trans  &trans
             >;
         };
     };
